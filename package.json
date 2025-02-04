@@ -10,8 +10,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon backend/app.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-    "start": "node backend/app.js"
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && vite build --prefix frontend",
+    "start": "node backend/app.js && vite preveiw --prefix frontend"
   },
   "type": "module",
   "keywords": [],
