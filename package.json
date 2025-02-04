@@ -9,9 +9,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon backend/app.js",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend && vite build --prefix frontend",
-    "start": "node backend/app.js && vite preveiw --prefix frontend"
+    "dev": "NODE_ENV=development nodemon backend/app.js",
+		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
+		"start": "NODE_ENV=production node backend/app.js"
   },
   "type": "module",
   "keywords": [],
