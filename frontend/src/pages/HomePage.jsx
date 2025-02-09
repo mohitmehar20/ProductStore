@@ -12,7 +12,7 @@ const HomePage = () => {
 
   async function getdata() {
     try {
-      const response = await fetch('https://productstore-m6fk.onrender.com/api/products')
+      const response = await fetch('http://localhost:5000/api/products')
       const result = await response.json()
       setproducts(result.data)
     } catch (error) {
