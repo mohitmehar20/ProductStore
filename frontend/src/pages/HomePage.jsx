@@ -12,7 +12,7 @@ const HomePage = () => {
 
   async function getdata() {
     try {
-      const response = await fetch('http://localhost:5000/api/products')
+      const response = await fetch('/api/products')
       const result = await response.json()
       setproducts(result.data)
     } catch (error) {
@@ -27,7 +27,7 @@ const HomePage = () => {
   }
   // deleting the product 
   async function confirmDelete(){
-    const response = await fetch(`http://localhost:5000/api/products/${dltID}`, { method: 'DELETE' })
+    const response = await fetch(`/api/products/${dltID}`, { method: 'DELETE' })
     // const result = await response.json()
     getdata()
     setIsDeleting(false)
@@ -44,7 +44,7 @@ const HomePage = () => {
     try {
       console.log(update);
       
-      const response = await fetch(`http://localhost:5000/api/products/${update._id}`, 
+      const response = await fetch(`/api/products/${update._id}`, 
       { 
         method: 'PUT',
         body: JSON.stringify(update),
