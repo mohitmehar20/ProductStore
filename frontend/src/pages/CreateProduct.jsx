@@ -17,7 +17,7 @@ function CreateProduct() {
       image
     }
 
-    await fetch('http://localhost:5000/api/products', { 
+    await fetch('/api/products', { 
       method: 'POST', 
       headers: {
         'Content-Type' : 'application/json'
